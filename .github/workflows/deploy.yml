@@ -17,11 +17,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /imx-buy-bot
+            cd ~/imx-buy-bot
             git pull origin master
             rm -rf nodes_modules
             yarn install
-#            pm2 start "yarn -s buy-eth >> ./buy-eth.log"
-#            pm2 start "yarn -s buy-eth >> ./buy-imx.log"
-#            pm2 start "yarn -s buy-eth >> ./buy-usdc.log"
+            pm2 restart buy-eth
+#            pm2 restart buy-imx
+#            pm2 restart buy-usdc
 
