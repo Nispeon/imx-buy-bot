@@ -20,7 +20,7 @@ jobs:
             cd ~/imx-buy-bot
             git pull origin master
             rm -rf nodes_modules
-            yarn install
+            yarn
             pm2 restart buy-eth
 #            pm2 restart buy-imx
 #            pm2 restart buy-usdc
